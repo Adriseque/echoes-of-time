@@ -100,6 +100,8 @@ const Index = () => {
           <div className="h-6 w-6 rounded-full timeline-node" />
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };
