@@ -25,7 +25,7 @@ const Footer = () => {
             <Mail size={20} />
           </a>
           <a
-            href="https://github.com/historychannel480"
+            href="https://github.com/Adriseque/echoes-of-time"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors"
