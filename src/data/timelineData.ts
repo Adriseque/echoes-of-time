@@ -1,3 +1,6 @@
+import ancientRome from "@/assets/ancient-rome.jpg";
+import medievalEurope from "@/assets/medieval-europe.jpg";
+import renaissance from "@/assets/renaissance.jpg";
 import frenchRevolution from "@/assets/french-revolution.jpg";
 import napoleon from "@/assets/napoleon.jpg";
 import industrialRevolution from "@/assets/industrial-revolution.jpg";
@@ -21,6 +24,120 @@ export interface TimelinePeriod {
 }
 
 export const timelinePeriods: TimelinePeriod[] = [
+  {
+    id: "ancient-rome",
+    backgroundImage: ancientRome,
+    events: [
+      {
+        id: "rome-1",
+        date: "753 BC",
+        title: "Founding of Rome",
+        description:
+          "According to legend, Romulus founds the city of Rome on the banks of the Tiber, beginning one of history's greatest civilizations.",
+        side: "right",
+      },
+      {
+        id: "rome-2",
+        date: "509 BC",
+        title: "Birth of the Republic",
+        description:
+          "Rome overthrows its last king and establishes the Roman Republic, pioneering representative government and civic law.",
+        side: "left",
+      },
+      {
+        id: "rome-3",
+        date: "44 BC",
+        title: "Assassination of Caesar",
+        description:
+          "Julius Caesar is assassinated on the Ides of March, plunging Rome into civil war and ending the Republic era.",
+        side: "right",
+      },
+      {
+        id: "rome-4",
+        date: "476 AD",
+        title: "Fall of the Western Empire",
+        description:
+          "The last Roman emperor Romulus Augustulus is deposed by Germanic chieftain Odoacer, marking the end of ancient Rome.",
+        side: "left",
+      },
+    ],
+  },
+  {
+    id: "medieval",
+    backgroundImage: medievalEurope,
+    events: [
+      {
+        id: "med-1",
+        date: "800",
+        title: "Coronation of Charlemagne",
+        description:
+          "Pope Leo III crowns Charlemagne as Emperor of the Romans, reviving the idea of a unified Christian Europe.",
+        side: "right",
+      },
+      {
+        id: "med-2",
+        date: "1066",
+        title: "Norman Conquest of England",
+        description:
+          "William the Conqueror defeats King Harold at Hastings, forever changing English language, culture, and governance.",
+        side: "left",
+      },
+      {
+        id: "med-3",
+        date: "1095–1291",
+        title: "The Crusades",
+        description:
+          "A series of religious wars launched by European Christians to reclaim the Holy Land, reshaping East-West relations for centuries.",
+        side: "right",
+      },
+      {
+        id: "med-4",
+        date: "1347–1351",
+        title: "The Black Death",
+        description:
+          "Bubonic plague devastates Europe, killing up to 60% of the population and fundamentally transforming medieval society.",
+        side: "left",
+      },
+    ],
+  },
+  {
+    id: "renaissance",
+    backgroundImage: renaissance,
+    events: [
+      {
+        id: "ren-1",
+        date: "1440",
+        title: "The Printing Press",
+        description:
+          "Johannes Gutenberg invents the movable-type printing press, revolutionizing the spread of knowledge across Europe.",
+        side: "right",
+      },
+      {
+        id: "ren-2",
+        date: "1492",
+        title: "Columbus Reaches the Americas",
+        description:
+          "Christopher Columbus lands in the New World, launching an age of exploration that connects continents forever.",
+        side: "left",
+      },
+      {
+        id: "ren-3",
+        date: "1503–1519",
+        title: "Leonardo & the Mona Lisa",
+        description:
+          "Leonardo da Vinci paints the Mona Lisa, embodying the Renaissance spirit of art, science, and human potential.",
+        side: "right",
+      },
+      {
+        id: "ren-4",
+        date: "1517",
+        title: "The Protestant Reformation",
+        description:
+          "Martin Luther nails his 95 Theses to the church door in Wittenberg, splitting Western Christianity and reshaping Europe.",
+        side: "left",
+      },
+    ],
+  },
   {
     id: "french-revolution",
     backgroundImage: frenchRevolution,
