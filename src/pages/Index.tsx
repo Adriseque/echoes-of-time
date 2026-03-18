@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { timelinePeriods } from "@/data/timelineData";
 import TimelineEvent from "@/components/TimelineEvent";
 import TimelineBranch from "@/components/TimelineBranch";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   const [currentBgIndex, setCurrentBgIndex] = useState(0);
