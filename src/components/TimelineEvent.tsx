@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import type { TimelineEvent as TEvent } from "@/data/timelineData";
 
 interface Props {
@@ -8,6 +9,7 @@ interface Props {
 const TimelineEvent = ({ event }: Props) => {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -37,7 +39,10 @@ const TimelineEvent = ({ event }: Props) => {
         transition: "opacity 0.7s ease-out, transform 0.7s ease-out",
       }}
     >
-      <div className="event-card rounded-xl px-6 py-5 max-w-md w-full">
+      <div
+        onClick={() => navigate(`/article/${event.id}`)}
+        className="event-card rounded-xl px-6 py-5 max-w-md w-full cursor-pointer hover:border-primary/40 hover:bg-black/85 transition-all duration-300 group"
+      >
         <p className="event-date text-glow text-2xl font-extrabold text-primary md:text-3xl lg:text-4xl">
           {event.date}
         </p>
@@ -46,6 +51,9 @@ const TimelineEvent = ({ event }: Props) => {
         </h3>
         <p className="mt-3 font-body text-sm leading-relaxed text-foreground/80">
           {event.description}
+        </p>
+        <p className="mt-3 font-display text-[10px] tracking-widest uppercase text-muted-foreground group-hover:text-primary transition-colors">
+          Read article →
         </p>
       </div>
     </div>
